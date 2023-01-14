@@ -27,6 +27,9 @@ const userModel = (sequelize, DataTypes) => {
         // get() {return jwt.sign({ username: this.username }, SECRET);}
            
     },
+      email: {
+        type: DataTypes.STRING,
+      },
     actions: {
         // {'read', 'create', 'update', 'delete'}
         type: DataTypes.VIRTUAL,

@@ -14,7 +14,8 @@ async function basic (req, res, next) {
         let [username, password] = decodedString.split(":");
         Users.authenticateBasic(username, password)
             .then((validUser) => {
-                console.log()
+                console.log(password);
+                console.log(username);
                 req.user = validUser;
                 next();
             })
